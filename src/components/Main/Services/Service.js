@@ -3,12 +3,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { showSingleAirlineData } from '../../../redux/actions/airLinesBookingAction';
+import { showSingleBusData } from '../../../redux/actions/busBookingActions';
 
 const Service = () => {
 
-    const ariLinesData = useSelector((state) => {
-        return state.airlinesReducers.airlines
+    const busData = useSelector((state) => {
+        return state.busReducers.buses
     })
 
     const dispatch = useDispatch();
@@ -19,18 +19,18 @@ const Service = () => {
             <div className="container py-5">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     {
-                        ariLinesData && ariLinesData.map(airline => (
+                        busData && busData.map(bus => (
 
                             <div class="col">
                                 <div class="card h-100 p-3 border_radius border-0 text-center">
-                                    <img src={airline.img} class="card-img-top" alt={airline.name} />
+                                    <img style={{height:'220px'}} src={bus.img} class="card-img-top" alt={bus.name} />
                                     <div class="card-body">
-                                        <h5 class="card_title">{airline.name}</h5>
+                                        <h5 class="card_title">{bus.name}</h5>
                                         <p className="card_subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur.</p>
                                     </div>
                                     <div className="card-action">
-                                        <Link to={`/book/${airline.id}`}>
-                                            <button onClick={() => dispatch(showSingleAirlineData(airline.id))} className="button">Book Now <span><FontAwesomeIcon icon={faArrowRight} /></span></button>
+                                        <Link to={`/book/${bus.id}`}>
+                                            <button onClick={() => dispatch(showSingleBusData(bus.id))} className="button">Book Now <span><FontAwesomeIcon icon={faArrowRight} /></span></button>
                                         </Link>
                                     </div>
                                 </div>

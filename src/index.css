@@ -36,7 +36,7 @@ code {
 .button {
   padding: 14px 40px;
   font-size: 15px;
-  background-color: #D3C19F;
+  background-color: goldenrod;
   text-transform: uppercase;
   border-radius: 64px;
   font-weight: 500;
@@ -70,7 +70,7 @@ code {
 
 .title {
   font-size: 24px;
-  color: #d3c19f;
+  color: brown;
   font-weight: 700;
 }
 

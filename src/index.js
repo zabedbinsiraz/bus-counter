@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle';
 import { store } from './redux/store';
 
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>

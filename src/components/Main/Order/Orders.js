@@ -1,17 +1,18 @@
 import React from 'react';
-import { useHistory } from 'react-router';
-import constructorImg from '../../../images/constructor.svg';
+import Footer from '../../Shared/Footer/Footer';
+import Navbar from '../../Shared/Navbar/Navbar';
 
 const Orders = () => {
-    const history = useHistory();
+    
     return (
+        <>
+        <Navbar></Navbar>
+        <h3 className="mt-5 pt-5 text-center">Your Order Details</h3>
         <div className="container">
-            <div className="col-md-8 mx-auto mt-3">
-                <img src={constructorImg} alt="constructor"  className="img-fluid"/>
-                <h1 className="text-center pt-5">This page is under constructor....</h1>
-                <button className="button d-block mx-auto" onClick={() => history.push('/')}>Back Home</button>
-            </div>
-        </div>
+       Developing this page.........
+         </div>
+        <Footer></Footer>
+        </>
     );
 };
 

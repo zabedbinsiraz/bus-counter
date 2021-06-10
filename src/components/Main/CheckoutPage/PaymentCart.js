@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToBookingList } from '../../../redux/actions/airLinesBookingAction';
+import { addToBookingList } from '../../../redux/actions/busBookingActions';
 import { useHistory } from 'react-router';
 
 
@@ -39,7 +39,7 @@ export const PaymentCart = ({ orderDetails }) => {
   const history = useHistory();
 
   const dispatch = useDispatch();
-  const temporaryBookingData = useSelector(state => state.airlinesReducers.temporaryBookingList[0])
+  const temporaryBookingData = useSelector(state => state.busReducers.temporaryBookingList[0])
 
   const handleSubmit = async (event) => {
     event.preventDefault();

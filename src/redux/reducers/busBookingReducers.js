@@ -1,31 +1,31 @@
-import airlinesData from '../../FakeData/airlines.json';
+import busesData from '../../FakeData/buses.json';
 
 const initialValue = {
-    airlines: airlinesData,
-    airLinesBookingList: [],
+    buses: busesData,
+    busBookingList: [],
     userInfo: [],
-    singleAirlinesData: [],
+    singleBusData: [],
     temporaryBookingList: []
 }
 
-export const airlinesReducers = (state = initialValue, action) => {
+export const busReducers = (state = initialValue, action) => {
     switch(action.type){
-        case 'SHOW_SINGLE_AIRLINE_DATA': {
+        case 'SHOW_SINGLE_BUS_DATA': {
             return {
                 ...state,
-                singleAirlinesData: state?.airlines.find(a => a.id === action.payload)
+                singleBusData: state?.buses.find(a => a.id === action.payload)
             }
         }
         case 'ADD_TO_BOOKING_LIST': {
             return {
                 ...state,
-                airLinesBookingList: [action.payload]
+                busBookingList: [action.payload]
             }
         }
         case 'REMOVE_FROM_BOOKING_LIST': {
             return {
                 ...state,
-                airLinesBookingList: state.airLinesBookingList.filter(b => b.id !== action.payload)
+                busBookingList: state.busBookingList.filter(b => b.id !== action.payload)
             }
         }
         case 'ADD_TO_TEMPORARY_BOOKING_LIST': {

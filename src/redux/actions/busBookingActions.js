@@ -1,6 +1,6 @@
-export const showSingleAirlineData = (payload) => {
+export const showSingleBusData = (payload) => {
     return {
-        type: 'SHOW_SINGLE_AIRLINE_DATA',
+        type: 'SHOW_SINGLE_BUS_DATA',
         payload
     }
 }

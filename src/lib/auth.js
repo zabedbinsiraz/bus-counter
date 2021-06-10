@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Redirect, Route } from "react-router";
 import firebase from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
-import { addUserInfo } from "../redux/actions/airLinesBookingAction";
+import { addUserInfo } from "../redux/actions/busBookingActions";
 
 export const useAuth = () => {
-    const authValue = useSelector(state => state.airlinesReducers.userInfo);
+    const authValue = useSelector(state => state.busReducers.userInfo);
     return authValue
 };
 
@@ -26,7 +26,7 @@ export const PrivateRoute = ({children, ...rest}) => {
         return () => unsubscribe();
     }, []);
 
-    const userInfo = useSelector(state => state.airlinesReducers.userInfo[0]);
+    const userInfo = useSelector(state => state.busReducers.userInfo[0]);
 
     return (
         <Route

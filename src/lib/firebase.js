@@ -2,13 +2,13 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBYraiy7IVk9CJiDd007xjc4-dGcJC3SWU",
-    authDomain: "airlines-booking.firebaseapp.com",
-    projectId: "airlines-booking",
-    storageBucket: "airlines-booking.appspot.com",
-    messagingSenderId: "852081788638",
-    appId: "1:852081788638:web:8256ec3ebb34427f85a44f"
-  };
+  apiKey: "AIzaSyDqp-SCYaDVP_o0JQxPX_VRw5XHdbPE6_I",
+  authDomain: "bus-counterbd.firebaseapp.com",
+  projectId: "bus-counterbd",
+  storageBucket: "bus-counterbd.appspot.com",
+  messagingSenderId: "829992095636",
+  appId: "1:829992095636:web:dd510a5843e92bc11b4981"
+};
 
 if(!firebase.apps.length) {
     firebase.initializeApp(firebaseConfig)

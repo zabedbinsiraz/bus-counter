@@ -1,10 +1,13 @@
 import { createStore, combineReducers } from "redux";
-import { airlinesReducers } from "./reducers/airLinesBookingReducers";
+
+import  { busReducers } from "./reducers/busBookingReducers";
+
 
 const combinedReducer = combineReducers({
-    // books: bookReducer,
-    // user: userReducer,
-    airlinesReducers: airlinesReducers
+  
+
+    busReducers: busReducers
+    
 })
 
 export const store = createStore(combinedReducer)

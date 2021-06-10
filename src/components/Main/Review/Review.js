@@ -4,29 +4,29 @@ import 'swiper/swiper-bundle.min.css';
 import SwiperCore, { Navigation, Scrollbar, A11y, Autoplay } from 'swiper';
 
 //images
-import review1 from '../../../images/review1.png';
-import review2 from '../../../images/review2.png';
-import review3 from '../../../images/review3.png';
-import review4 from '../../../images/review4.png';
+import review1 from '../../../images/p1.jpg';
+import review2 from '../../../images/p2.jpg';
+import review3 from '../../../images/p3.jpg';
+import review4 from '../../../images/p4.jpg';
 
 const reviewData = [
     {
-        name: 'John Doe',
+        name: 'Mr Messi',
         img: review1,
         review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut aliquip ex ea commodo consequat.'
     },
     {
-        name: 'John Cena',
+        name: 'MbaPPe',
         img: review2,
         review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut aliquip ex ea commodo consequat.'
     },
     {
-        name: 'The Rock',
+        name: 'runalDo',
         img: review3,
         review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut aliquip ex ea commodo consequat.'
     },
     {
-        name: 'Ada Lables',
+        name: 'mayanMar',
         img: review4,
         review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore magna aliqua. Ut aliquip ex ea commodo consequat.'
     },
@@ -56,7 +56,7 @@ const Review = () => {
                             <SwiperSlide key={index}>
                                 <div className="p-5 col-12 col-md-8 col-sm-12 col-lg-8 mx-auto text-dark text-center border_radius" style={{backgroundColor: '#F6F4EF'}}>
                                     <blockquote className="review-text mb-3">{review.review}</blockquote>
-                                    <img src={review.img} alt={review.name} />
+                                    <img style={{borderRadius:'50%',height:"50px",width:'60px'}} src={review.img} alt={review.name} />
                                     <h3 className="reviewer_name mt-3">{review.name}</h3>
                                 </div>
                             </SwiperSlide>
